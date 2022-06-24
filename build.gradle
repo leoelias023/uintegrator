@@ -1,0 +1,22 @@
+
+
+allprojects {
+
+    group 'br.com.dbaonline'
+    version '1.0.0'
+
+    repositories {
+
+        maven {
+            url 'http://192.168.16.159:8083/artifactory/virtual-maven'
+            credentials {
+                username System.getenv("MAVEN_USERNAME") ?: "$mavenUsername"
+                password System.getenv("MAVEN_PASSWORD") ?: "$mavenPassword"
+            }
+            allowInsecureProtocol true
+        }
+
+        mavenCentral()
+    }
+
+}

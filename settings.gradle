@@ -1,0 +1,6 @@
+rootProject.name = 'unity-integrator'
+
+include 'api'
+include 'remote-logs'
+include 'remote-control'
+include 'remote-parameter'

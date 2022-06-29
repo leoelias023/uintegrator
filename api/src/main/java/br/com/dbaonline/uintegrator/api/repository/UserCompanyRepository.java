@@ -11,4 +11,6 @@ import java.util.List;
 public interface UserCompanyRepository extends CrudRepository<UserCompanyEntity, Long> {
 
     List<UserCompanyEntity> findAllByCompany_Id(@NonNull Long companyId);
+
+    UserCompanyEntity findByCompany_IdAndUser_Id(@NonNull Long companyId, @NonNull Long userId);
 }

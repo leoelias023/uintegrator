@@ -77,10 +77,12 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
             return null;
         }
 
-        val roles = userService.getUserByEmail(user)
+        val userObject = userService.getUserByEmail(user);
+
+        val roles = userObject
                 .map(User::getRoles)
                 .orElse(new ArrayList<>());
 
-        return new UsernamePasswordAuthenticationToken(user, null, roles);
+        return new UsernamePasswordAuthenticationToken(userObject, null, roles);
     }
 }

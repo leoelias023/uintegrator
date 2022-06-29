@@ -12,8 +12,4 @@ public interface CompanyService {
     List<Company> listAll();
 
     Company create(@NonNull Company company);
-
-    List<UserCompany> listUsersOfCompany(@NonNull Long companyId);
-
-    UserCompany assignUserToCompany(@NonNull AssignUserCompany userCompany);
 }

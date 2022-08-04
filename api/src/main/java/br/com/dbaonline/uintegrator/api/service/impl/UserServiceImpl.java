@@ -9,6 +9,7 @@ import br.com.dbaonline.uintegrator.api.exception.UserAlreadyExistsException;
 import br.com.dbaonline.uintegrator.api.exception.UserNotFoundException;
 import br.com.dbaonline.uintegrator.api.repository.UserRepository;
 import br.com.dbaonline.uintegrator.api.repository.UserRoleRepository;
+import br.com.dbaonline.uintegrator.api.serializer.UserSerializer;
 import br.com.dbaonline.uintegrator.api.service.UserService;
 import lombok.NonNull;
 import lombok.val;
@@ -18,7 +19,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -31,6 +31,9 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
+
+    @Autowired
+    private UserSerializer userSerializer;
 
     @Override
     public void createUser(@NonNull CreateUser createUser) {
@@ -74,7 +77,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User find(@NonNull Long userId) {
         return userRepository.findById(userId)
-                .map(this::fromEntity)
+                .map(userSerializer::fromEntity)
                 .orElseThrow(() -> { throw new UserNotFoundException(); });
     }
 
@@ -89,24 +92,6 @@ public class UserServiceImpl implements UserService {
         userRoleEntity.setUser(user);
 
         userRoleRepository.save(userRoleEntity);
-    }
-
-    private User fromEntity(@NonNull UserEntity entity) {
-        return User.builder()
-                .id(entity.getId())
-                .email(entity.getEmail())
-                .password(entity.getPassword())
-                .roles(
-                        entity.getRoles()
-                            .stream()
-                                .map(this::fromEntity)
-                                .collect(Collectors.toList())
-                )
-                .build();
-    }
-
-    private UserRole fromEntity(@NonNull UserRoleEntity userRoleEntity) {
-        return userRoleEntity.getRole();
     }
 
 }

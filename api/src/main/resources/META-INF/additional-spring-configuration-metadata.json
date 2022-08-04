@@ -4,5 +4,35 @@
       "name": "auth.secret-key",
       "type": "java.lang.String",
       "description": "Secret key used during authentication process for JWT token process."
-  }
-] }
+    },
+    {
+      "name": "storer.credentials.password",
+      "type": "java.lang.String",
+      "description": "Description for storer.credentials.password."
+    },
+    {
+      "name": "storer.credentials.username",
+      "type": "java.lang.String",
+      "description": "Description for storer.credentials.username."
+    },
+    {
+      "name": "storer.host",
+      "type": "java.lang.String",
+      "description": "Description for storer.host."
+    },
+    {
+      "name": "storer.port",
+      "type": "java.lang.String",
+      "description": "Description for storer.port."
+    },
+    {
+      "name": "storer.scheme",
+      "type": "java.lang.String",
+      "description": "Description for storer.scheme."
+    },
+    {
+      "name": "minutes-heartbeat-pulse",
+      "type": "java.lang.Integer",
+      "description": "Description for minutes-heartbeat-pulse."
+    }
+  ] }

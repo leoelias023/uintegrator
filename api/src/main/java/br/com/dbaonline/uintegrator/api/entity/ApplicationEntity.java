@@ -18,7 +18,7 @@ public class ApplicationEntity {
     @Column
     private String title;
 
-    @Column
+    @Column(name = "company_id")
     private Long companyId;
 
     @Column

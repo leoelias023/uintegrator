@@ -17,7 +17,7 @@ public class SecurityConstant {
     private SecurityCredentials securityCredentials;
 
     /** Validade para JWT tokens gerados no processo de autenticação. */
-    public final int EXPIRED_MILLISECONDS = 600_000;
+    public final int EXPIRED_MILLISECONDS = 72000000;
 
     /** Nome da chave do cabeçalho que contém o JWT token para autorização. */
     public final String AUTHORIZATION_HEADER = "Authorization";

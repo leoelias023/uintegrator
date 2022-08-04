@@ -24,10 +24,11 @@ dependencies {
     implementation 'com.auth0:java-jwt:3.19.2'
 
     implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
-    implementation 'mysql:mysql-connector-java:8.0.30'
-
+    
     implementation 'jakarta.json:jakarta.json-api:2.1.0'
     implementation project(':storer')
+
+    implementation 'mysql:mysql-connector-java:8.0.30'
 }
 
 tasks.named('test') {

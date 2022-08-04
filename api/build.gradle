@@ -26,8 +26,18 @@ dependencies {
     implementation 'org.springdoc:springdoc-openapi-ui:1.6.9'
     implementation 'mysql:mysql-connector-java:8.0.30'
 
+<<<<<<< api/build.gradle
     implementation 'jakarta.json:jakarta.json-api:2.1.0'
     implementation project(':storer')
+=======
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.24'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+    implementation 'mysql:mysql-connector-java:8.0.30'
+>>>>>>> api/build.gradle
 }
 
 tasks.named('test') {

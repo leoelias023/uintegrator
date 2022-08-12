@@ -12,4 +12,6 @@ import java.util.UUID;
 public interface ApplicationRepository extends CrudRepository<ApplicationEntity, UUID> {
 
     List<ApplicationEntity> findAllByCompanyId(@NonNull Long companyId);
+
+    ApplicationEntity getApplicationEntityByCompanyIdAndRegisterCode(@NonNull Long companyId, @NonNull UUID registerCode);
 }

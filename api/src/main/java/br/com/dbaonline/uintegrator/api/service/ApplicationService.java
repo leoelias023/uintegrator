@@ -12,6 +12,8 @@ public interface ApplicationService {
 
     Application createApplication(Application application) throws IOException;
 
+    Application getApplicationBy(@NonNull UUID applicationRegisterCode, @NonNull Long companyId);
+
     List<Application> listApplications(@NonNull Long companyId);
 
     ApplicationStatus searchByApplicationStatus(@NonNull UUID applicationRegisterCode) throws IOException;

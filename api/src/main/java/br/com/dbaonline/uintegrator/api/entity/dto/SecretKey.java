@@ -1,21 +1,23 @@
 package br.com.dbaonline.uintegrator.api.entity.dto;
 
-import br.com.dbaonline.uintegrator.api.entity.transients.UserRole;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Builder;
 import lombok.Value;
 
 import java.util.List;
+import java.util.UUID;
 
 @Value
 @Builder
-public class User {
+public class SecretKey {
+    UUID id;
 
-    Long id;
-    String email;
+    Long companyId;
+
+    String title;
 
     @JsonIgnore
-    String password;
+    String key;
 
-    List<UserRole> roles;
+    List<Application> authorizedApplications;
 }

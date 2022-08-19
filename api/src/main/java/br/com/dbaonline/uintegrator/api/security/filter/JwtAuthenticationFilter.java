@@ -1,9 +1,9 @@
 package br.com.dbaonline.uintegrator.api.security.filter;
 
-import br.com.dbaonline.uintegrator.api.entity.UserEntity;
-import br.com.dbaonline.uintegrator.api.security.UserAuthorizationToken;
 import br.com.dbaonline.uintegrator.api.security.SecurityConstant;
+import br.com.dbaonline.uintegrator.api.security.UserAuthorizationToken;
 import br.com.dbaonline.uintegrator.api.security.UserDetailsData;
+import br.com.dbaonline.uintegrator.entity.UserEntity;
 import com.auth0.jwt.JWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.val;

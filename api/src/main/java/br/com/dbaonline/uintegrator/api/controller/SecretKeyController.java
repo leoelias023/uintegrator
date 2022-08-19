@@ -1,11 +1,11 @@
 package br.com.dbaonline.uintegrator.api.controller;
 
-import br.com.dbaonline.uintegrator.api.entity.dto.AuthorizeApplicationKey;
-import br.com.dbaonline.uintegrator.api.entity.dto.CreateApplicationKey;
-import br.com.dbaonline.uintegrator.api.entity.dto.CreatedApplicationKey;
-import br.com.dbaonline.uintegrator.api.entity.dto.SecretKey;
 import br.com.dbaonline.uintegrator.api.exception.AccessDeniedException;
 import br.com.dbaonline.uintegrator.api.service.SecretKeyService;
+import br.com.dbaonline.uintegrator.entity.dto.AuthorizeApplicationKey;
+import br.com.dbaonline.uintegrator.entity.dto.CreateApplicationKey;
+import br.com.dbaonline.uintegrator.entity.dto.CreatedApplicationKey;
+import br.com.dbaonline.uintegrator.entity.dto.SecretKey;
 import lombok.NonNull;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;

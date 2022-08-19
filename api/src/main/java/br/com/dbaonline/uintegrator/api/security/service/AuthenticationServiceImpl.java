@@ -1,7 +1,6 @@
 package br.com.dbaonline.uintegrator.api.security.service;
 
 import br.com.dbaonline.uintegrator.api.security.UserDetailsData;
-import br.com.dbaonline.uintegrator.api.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

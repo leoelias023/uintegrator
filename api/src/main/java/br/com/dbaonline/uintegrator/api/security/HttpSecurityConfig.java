@@ -63,11 +63,6 @@ public class HttpSecurityConfig {
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
     public CorsConfigurationSource corsConfiguration() {
         val source = new UrlBasedCorsConfigurationSource();
         val corsConfiguration = new CorsConfiguration().applyPermitDefaultValues();

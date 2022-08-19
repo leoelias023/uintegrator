@@ -1,9 +1,9 @@
 package br.com.dbaonline.uintegrator.api.serializer;
 
-import br.com.dbaonline.uintegrator.api.entity.ApplicationEntity;
-import br.com.dbaonline.uintegrator.api.entity.ApplicationModuleEntity;
-import br.com.dbaonline.uintegrator.api.entity.dto.Application;
-import br.com.dbaonline.uintegrator.api.entity.transients.ApplicationModule;
+import br.com.dbaonline.uintegrator.entity.ApplicationEntity;
+import br.com.dbaonline.uintegrator.entity.ApplicationModuleEntity;
+import br.com.dbaonline.uintegrator.entity.dto.Application;
+import br.com.dbaonline.uintegrator.entity.transients.ApplicationModule;
 import lombok.NonNull;
 import lombok.val;
 import org.springframework.stereotype.Component;

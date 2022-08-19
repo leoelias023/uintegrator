@@ -1,13 +1,13 @@
 package br.com.dbaonline.uintegrator.api.service.impl;
 
-import br.com.dbaonline.uintegrator.api.entity.dto.CreateApplicationKey;
-import br.com.dbaonline.uintegrator.api.entity.dto.CreatedApplicationKey;
-import br.com.dbaonline.uintegrator.api.entity.dto.SecretKey;
-import br.com.dbaonline.uintegrator.api.repository.ApplicationRepository;
-import br.com.dbaonline.uintegrator.api.repository.SecretKeyRepository;
 import br.com.dbaonline.uintegrator.api.serializer.SecretKeySerializer;
 import br.com.dbaonline.uintegrator.api.service.ApplicationService;
 import br.com.dbaonline.uintegrator.api.service.SecretKeyService;
+import br.com.dbaonline.uintegrator.entity.dto.CreateApplicationKey;
+import br.com.dbaonline.uintegrator.entity.dto.CreatedApplicationKey;
+import br.com.dbaonline.uintegrator.entity.dto.SecretKey;
+import br.com.dbaonline.uintegrator.repository.ApplicationRepository;
+import br.com.dbaonline.uintegrator.repository.SecretKeyRepository;
 import lombok.NonNull;
 import lombok.val;
 import org.apache.tomcat.util.codec.binary.Base64;

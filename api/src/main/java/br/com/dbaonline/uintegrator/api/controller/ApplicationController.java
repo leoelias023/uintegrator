@@ -1,8 +1,9 @@
 package br.com.dbaonline.uintegrator.api.controller;
 
-import br.com.dbaonline.uintegrator.api.entity.dto.Application;
-import br.com.dbaonline.uintegrator.api.entity.dto.ApplicationStatus;
 import br.com.dbaonline.uintegrator.api.service.ApplicationService;
+import br.com.dbaonline.uintegrator.entity.dto.Application;
+import br.com.dbaonline.uintegrator.entity.dto.ApplicationStatus;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
+@Slf4j
 public class ApplicationController {
 
     @Autowired
@@ -23,6 +25,7 @@ public class ApplicationController {
 
     @PostMapping("/application")
     public Application createApplication(@RequestBody Application application) throws IOException {
+        log.info("Creating application");
         return applicationService.createApplication(application);
     }
 

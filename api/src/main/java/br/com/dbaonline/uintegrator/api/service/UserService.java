@@ -1,7 +1,7 @@
 package br.com.dbaonline.uintegrator.api.service;
 
-import br.com.dbaonline.uintegrator.api.entity.dto.CreateUser;
-import br.com.dbaonline.uintegrator.api.entity.dto.User;
+import br.com.dbaonline.uintegrator.entity.dto.CreateUser;
+import br.com.dbaonline.uintegrator.entity.dto.User;
 import lombok.NonNull;
 
 public interface UserService {

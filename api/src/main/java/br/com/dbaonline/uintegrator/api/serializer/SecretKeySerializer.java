@@ -1,7 +1,7 @@
 package br.com.dbaonline.uintegrator.api.serializer;
 
-import br.com.dbaonline.uintegrator.api.entity.SecretKeyEntity;
-import br.com.dbaonline.uintegrator.api.entity.dto.SecretKey;
+import br.com.dbaonline.uintegrator.entity.SecretKeyEntity;
+import br.com.dbaonline.uintegrator.entity.dto.SecretKey;
 import lombok.NonNull;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;

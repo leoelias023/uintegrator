@@ -1,7 +1,7 @@
 package br.com.dbaonline.uintegrator.api.serializer;
 
-import br.com.dbaonline.uintegrator.api.entity.CompanyEntity;
-import br.com.dbaonline.uintegrator.api.entity.dto.Company;
+import br.com.dbaonline.uintegrator.entity.CompanyEntity;
+import br.com.dbaonline.uintegrator.entity.dto.Company;
 import lombok.NonNull;
 import lombok.val;
 import org.springframework.stereotype.Service;

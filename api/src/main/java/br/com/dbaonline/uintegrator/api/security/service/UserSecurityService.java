@@ -1,10 +1,10 @@
 package br.com.dbaonline.uintegrator.api.security.service;
 
-import br.com.dbaonline.uintegrator.api.entity.UserRoleEntity;
-import br.com.dbaonline.uintegrator.api.entity.dto.User;
-import br.com.dbaonline.uintegrator.api.entity.transients.UserRole;
-import br.com.dbaonline.uintegrator.api.repository.UserRepository;
-import br.com.dbaonline.uintegrator.api.repository.UserRoleRepository;
+import br.com.dbaonline.uintegrator.entity.UserRoleEntity;
+import br.com.dbaonline.uintegrator.entity.dto.User;
+import br.com.dbaonline.uintegrator.entity.transients.UserRole;
+import br.com.dbaonline.uintegrator.repository.UserRepository;
+import br.com.dbaonline.uintegrator.repository.UserRoleRepository;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

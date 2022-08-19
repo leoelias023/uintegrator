@@ -1,14 +1,14 @@
 package br.com.dbaonline.uintegrator.api.service.impl;
 
-import br.com.dbaonline.uintegrator.api.entity.dto.AssignUserCompany;
-import br.com.dbaonline.uintegrator.api.entity.dto.UserCompany;
-import br.com.dbaonline.uintegrator.api.repository.CompanyRepository;
-import br.com.dbaonline.uintegrator.api.repository.UserCompanyRepository;
-import br.com.dbaonline.uintegrator.api.repository.UserRepository;
 import br.com.dbaonline.uintegrator.api.serializer.CompanySerializer;
 import br.com.dbaonline.uintegrator.api.serializer.UserCompanySerializer;
 import br.com.dbaonline.uintegrator.api.serializer.UserSerializer;
 import br.com.dbaonline.uintegrator.api.service.UserCompanyService;
+import br.com.dbaonline.uintegrator.entity.dto.AssignUserCompany;
+import br.com.dbaonline.uintegrator.entity.dto.UserCompany;
+import br.com.dbaonline.uintegrator.repository.CompanyRepository;
+import br.com.dbaonline.uintegrator.repository.UserCompanyRepository;
+import br.com.dbaonline.uintegrator.repository.UserRepository;
 import lombok.NonNull;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;

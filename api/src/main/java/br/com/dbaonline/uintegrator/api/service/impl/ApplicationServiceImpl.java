@@ -1,14 +1,14 @@
 package br.com.dbaonline.uintegrator.api.service.impl;
 
 import br.com.dbaonline.uintegrator.api.controller.AuthenticationContext;
-import br.com.dbaonline.uintegrator.api.entity.dto.Application;
-import br.com.dbaonline.uintegrator.api.entity.dto.ApplicationStatus;
-import br.com.dbaonline.uintegrator.api.entity.transients.ApplicationModule;
 import br.com.dbaonline.uintegrator.api.exception.AccessDeniedException;
-import br.com.dbaonline.uintegrator.api.repository.ApplicationRepository;
 import br.com.dbaonline.uintegrator.api.serializer.ApplicationSerializer;
 import br.com.dbaonline.uintegrator.api.service.ApplicationService;
 import br.com.dbaonline.uintegrator.api.service.LogsService;
+import br.com.dbaonline.uintegrator.entity.dto.Application;
+import br.com.dbaonline.uintegrator.entity.dto.ApplicationStatus;
+import br.com.dbaonline.uintegrator.entity.transients.ApplicationModule;
+import br.com.dbaonline.uintegrator.repository.ApplicationRepository;
 import lombok.NonNull;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;

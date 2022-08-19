@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
+apply from: '../common.gradle'
+
+dependencies {
+    implementation project(':storer')
+    implementation project(':service')
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+tasks.named('compileJava') {
+    inputs.files(tasks.named('processResources'))
+}

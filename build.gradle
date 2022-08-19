@@ -1,4 +1,7 @@
-
+plugins {
+    id 'org.springframework.boot' version '2.7.0' apply false
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE' apply false
+}
 
 allprojects {
 
@@ -18,5 +21,12 @@ allprojects {
 
         mavenCentral()
     }
+
+}
+
+subprojects {
+
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
 
 }

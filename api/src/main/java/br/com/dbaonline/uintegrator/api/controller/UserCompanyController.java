@@ -1,9 +1,9 @@
 package br.com.dbaonline.uintegrator.api.controller;
 
-import br.com.dbaonline.uintegrator.api.entity.dto.AssignUserCompany;
-import br.com.dbaonline.uintegrator.api.entity.dto.UserCompany;
 import br.com.dbaonline.uintegrator.api.security.annotation.isAdmin;
 import br.com.dbaonline.uintegrator.api.service.UserCompanyService;
+import br.com.dbaonline.uintegrator.entity.dto.AssignUserCompany;
+import br.com.dbaonline.uintegrator.entity.dto.UserCompany;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;

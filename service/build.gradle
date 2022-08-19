@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+}
+
+apply from: '../common.gradle'
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework:spring-context:5.3.22'
+
+    implementation 'mysql:mysql-connector-java:8.0.30'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.3'
+    implementation 'com.diogonunes:JColor:5.5.1'
+}

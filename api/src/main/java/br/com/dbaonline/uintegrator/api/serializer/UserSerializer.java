@@ -1,9 +1,9 @@
 package br.com.dbaonline.uintegrator.api.serializer;
 
-import br.com.dbaonline.uintegrator.api.entity.UserEntity;
-import br.com.dbaonline.uintegrator.api.entity.UserRoleEntity;
-import br.com.dbaonline.uintegrator.api.entity.dto.User;
-import br.com.dbaonline.uintegrator.api.entity.transients.UserRole;
+import br.com.dbaonline.uintegrator.entity.UserEntity;
+import br.com.dbaonline.uintegrator.entity.UserRoleEntity;
+import br.com.dbaonline.uintegrator.entity.dto.User;
+import br.com.dbaonline.uintegrator.entity.transients.UserRole;
 import lombok.NonNull;
 import lombok.val;
 import org.springframework.stereotype.Service;

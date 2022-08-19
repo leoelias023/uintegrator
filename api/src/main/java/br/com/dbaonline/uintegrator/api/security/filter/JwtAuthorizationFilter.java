@@ -1,20 +1,16 @@
 package br.com.dbaonline.uintegrator.api.security.filter;
 
-import br.com.dbaonline.uintegrator.api.entity.dto.User;
-import br.com.dbaonline.uintegrator.api.entity.transients.UserRole;
 import br.com.dbaonline.uintegrator.api.security.SecurityConstant;
 import br.com.dbaonline.uintegrator.api.security.service.UserSecurityService;
-import br.com.dbaonline.uintegrator.api.service.UserService;
+import br.com.dbaonline.uintegrator.entity.dto.User;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import lombok.NonNull;
 import lombok.val;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
-import org.springframework.stereotype.Component;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

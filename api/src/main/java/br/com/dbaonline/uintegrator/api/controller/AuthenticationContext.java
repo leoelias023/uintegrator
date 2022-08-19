@@ -1,8 +1,8 @@
 package br.com.dbaonline.uintegrator.api.controller;
 
-import br.com.dbaonline.uintegrator.api.entity.dto.User;
-import br.com.dbaonline.uintegrator.api.entity.transients.CompanyRole;
 import br.com.dbaonline.uintegrator.api.service.UserCompanyService;
+import br.com.dbaonline.uintegrator.entity.dto.User;
+import br.com.dbaonline.uintegrator.entity.transients.CompanyRole;
 import lombok.NonNull;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;

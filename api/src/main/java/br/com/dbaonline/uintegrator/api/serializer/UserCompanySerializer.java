@@ -1,7 +1,7 @@
 package br.com.dbaonline.uintegrator.api.serializer;
 
-import br.com.dbaonline.uintegrator.api.entity.UserCompanyEntity;
-import br.com.dbaonline.uintegrator.api.entity.dto.UserCompany;
+import br.com.dbaonline.uintegrator.entity.UserCompanyEntity;
+import br.com.dbaonline.uintegrator.entity.dto.UserCompany;
 import lombok.NonNull;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;

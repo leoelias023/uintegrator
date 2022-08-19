@@ -5,6 +5,7 @@ plugins {
 apply from: '../common.gradle'
 
 dependencies {
+    implementation project(':service')
     implementation 'co.elastic.clients:elasticsearch-java:8.3.3'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.3'
 }

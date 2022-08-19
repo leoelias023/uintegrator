@@ -1,8 +1,6 @@
 package br.com.dbaonline.uintegrator.api.service;
 
-import br.com.dbaonline.uintegrator.api.entity.dto.AssignUserCompany;
-import br.com.dbaonline.uintegrator.api.entity.dto.Company;
-import br.com.dbaonline.uintegrator.api.entity.dto.UserCompany;
+import br.com.dbaonline.uintegrator.entity.dto.Company;
 import lombok.NonNull;
 
 import java.util.List;

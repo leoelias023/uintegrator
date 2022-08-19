@@ -1,5 +1,7 @@
 package br.com.dbaonline.uintegrator.storer.client;
 
+import br.com.dbaonline.uintegrator.entity.dto.Log;
+import br.com.dbaonline.uintegrator.entity.transients.LogLevel;
 import br.com.dbaonline.uintegrator.storer.config.ElasticSearchConfig;
 import br.com.dbaonline.uintegrator.storer.entity.ApplicationLog;
 import co.elastic.clients.elasticsearch._types.SortOrder;
@@ -28,24 +30,8 @@ public class LogClient extends AbstractClient {
     private static final String LEVEL_FIELD = "level";
     private static final String TIMESTAMP_FIELD = "@timestamp";
 
-    private enum LogLevel {
-        ERROR,WARNING,INFO;
-    }
-
     public LogClient(@NonNull ElasticSearchConfig config) {
         super(config);
-    }
-
-    /**
-     * Create log index for application.
-     */
-    public void createIndex(@NonNull UUID applicationCode) throws IOException {
-        val createIndexRequest = new CreateIndexRequest.Builder()
-                .index(mountIndex(applicationCode))
-                .build();
-
-        Objects.requireNonNull(client).indices()
-                .create(createIndexRequest);
     }
 
     public void createDataStream(@NonNull UUID applicationCode) throws IOException {
@@ -56,6 +42,13 @@ public class LogClient extends AbstractClient {
         Objects.requireNonNull(client)
                 .indices()
                 .createDataStream(createDataStreamRequest);
+    }
+
+    /**
+     * Insert a log entry to a application data stream.
+     */
+    public void insert(@NonNull UUID applicationCode, @NonNull Log log) {
+        // TODO: Implement here
     }
 
     /**

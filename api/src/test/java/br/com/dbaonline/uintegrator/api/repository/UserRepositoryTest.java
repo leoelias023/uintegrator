@@ -1,8 +1,8 @@
 package br.com.dbaonline.uintegrator.api.repository;
 
-import br.com.dbaonline.uintegrator.api.entity.dto.CreateUser;
-import br.com.dbaonline.uintegrator.api.entity.transients.UserRole;
 import br.com.dbaonline.uintegrator.api.service.UserService;
+import br.com.dbaonline.uintegrator.entity.dto.CreateUser;
+import br.com.dbaonline.uintegrator.entity.transients.UserRole;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

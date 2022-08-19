@@ -1,10 +1,10 @@
 package br.com.dbaonline.uintegrator.api.service.impl;
 
-import br.com.dbaonline.uintegrator.api.config.LogConfig;
+import br.com.dbaonline.uintegrator.api.config.LogConfigVanilla;
 import br.com.dbaonline.uintegrator.api.config.StorerConfig;
-import br.com.dbaonline.uintegrator.api.entity.dto.ApplicationStatus;
-import br.com.dbaonline.uintegrator.api.entity.transients.TagStatus;
 import br.com.dbaonline.uintegrator.api.service.LogsService;
+import br.com.dbaonline.uintegrator.entity.dto.ApplicationStatus;
+import br.com.dbaonline.uintegrator.entity.transients.TagStatus;
 import br.com.dbaonline.uintegrator.storer.client.LogClient;
 import br.com.dbaonline.uintegrator.storer.entity.ApplicationLog;
 import lombok.NonNull;
@@ -24,7 +24,7 @@ public class LogServiceImpl implements LogsService {
     private StorerConfig config;
 
     @Autowired
-    private LogConfig logConfig;
+    private LogConfigVanilla logConfig;
 
     private LogClient logClient;
 

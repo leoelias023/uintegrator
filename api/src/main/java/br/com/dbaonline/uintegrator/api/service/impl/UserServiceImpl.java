@@ -1,16 +1,16 @@
 package br.com.dbaonline.uintegrator.api.service.impl;
 
-import br.com.dbaonline.uintegrator.api.entity.UserEntity;
-import br.com.dbaonline.uintegrator.api.entity.UserRoleEntity;
-import br.com.dbaonline.uintegrator.api.entity.dto.CreateUser;
-import br.com.dbaonline.uintegrator.api.entity.dto.User;
-import br.com.dbaonline.uintegrator.api.entity.transients.UserRole;
 import br.com.dbaonline.uintegrator.api.exception.UserAlreadyExistsException;
 import br.com.dbaonline.uintegrator.api.exception.UserNotFoundException;
-import br.com.dbaonline.uintegrator.api.repository.UserRepository;
-import br.com.dbaonline.uintegrator.api.repository.UserRoleRepository;
 import br.com.dbaonline.uintegrator.api.serializer.UserSerializer;
 import br.com.dbaonline.uintegrator.api.service.UserService;
+import br.com.dbaonline.uintegrator.entity.UserEntity;
+import br.com.dbaonline.uintegrator.entity.UserRoleEntity;
+import br.com.dbaonline.uintegrator.entity.dto.CreateUser;
+import br.com.dbaonline.uintegrator.entity.dto.User;
+import br.com.dbaonline.uintegrator.entity.transients.UserRole;
+import br.com.dbaonline.uintegrator.repository.UserRepository;
+import br.com.dbaonline.uintegrator.repository.UserRoleRepository;
 import lombok.NonNull;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package br.com.dbaonline.uintegrator.api.service;
 
-import br.com.dbaonline.uintegrator.api.entity.dto.ApplicationStatus;
+import br.com.dbaonline.uintegrator.entity.dto.ApplicationStatus;
 import lombok.NonNull;
 
 import java.io.IOException;

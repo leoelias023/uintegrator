@@ -7,6 +7,7 @@ import br.com.dbaonline.uintegrator.storer.entity.ApplicationLog;
 import co.elastic.clients.elasticsearch._types.SortOrder;
 import co.elastic.clients.elasticsearch._types.query_dsl.MatchQuery;
 import co.elastic.clients.elasticsearch._types.query_dsl.RangeQuery;
+import co.elastic.clients.elasticsearch.core.IndexRequest;
 import co.elastic.clients.elasticsearch.core.search.Hit;
 import co.elastic.clients.elasticsearch.indices.CreateDataStreamRequest;
 import co.elastic.clients.elasticsearch.indices.CreateIndexRequest;
@@ -47,8 +48,15 @@ public class LogClient extends AbstractClient {
     /**
      * Insert a log entry to a application data stream.
      */
-    public void insert(@NonNull UUID applicationCode, @NonNull Log log) {
-        // TODO: Implement here
+    public void insert(@NonNull UUID applicationCode, @NonNull Log log) throws IOException {
+        val request = IndexRequest.of(builder -> builder.index(mountIndex(applicationCode))
+                .document(ApplicationLog.builder()
+                        .level(log.getLevel().name())
+                        .message(log.getMessage())
+                        .timestamp(log.getTimestamp())
+                        .build()));
+
+        val response = Objects.requireNonNull(client).index(request);
     }
 
     /**

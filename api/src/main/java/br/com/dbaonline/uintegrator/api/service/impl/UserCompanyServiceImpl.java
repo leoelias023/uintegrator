@@ -1,8 +1,8 @@
 package br.com.dbaonline.uintegrator.api.service.impl;
 
-import br.com.dbaonline.uintegrator.api.serializer.CompanySerializer;
-import br.com.dbaonline.uintegrator.api.serializer.UserCompanySerializer;
-import br.com.dbaonline.uintegrator.api.serializer.UserSerializer;
+import br.com.dbaonline.uintegrator.serializer.CompanySerializer;
+import br.com.dbaonline.uintegrator.serializer.UserCompanySerializer;
+import br.com.dbaonline.uintegrator.serializer.UserSerializer;
 import br.com.dbaonline.uintegrator.api.service.UserCompanyService;
 import br.com.dbaonline.uintegrator.entity.dto.AssignUserCompany;
 import br.com.dbaonline.uintegrator.entity.dto.UserCompany;

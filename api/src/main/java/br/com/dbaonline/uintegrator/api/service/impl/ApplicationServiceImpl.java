@@ -2,7 +2,7 @@ package br.com.dbaonline.uintegrator.api.service.impl;
 
 import br.com.dbaonline.uintegrator.api.controller.AuthenticationContext;
 import br.com.dbaonline.uintegrator.api.exception.AccessDeniedException;
-import br.com.dbaonline.uintegrator.api.serializer.ApplicationSerializer;
+import br.com.dbaonline.uintegrator.serializer.ApplicationSerializer;
 import br.com.dbaonline.uintegrator.api.service.ApplicationService;
 import br.com.dbaonline.uintegrator.api.service.LogsService;
 import br.com.dbaonline.uintegrator.entity.dto.Application;

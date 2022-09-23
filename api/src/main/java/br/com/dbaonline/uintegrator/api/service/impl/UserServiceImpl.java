@@ -2,7 +2,7 @@ package br.com.dbaonline.uintegrator.api.service.impl;
 
 import br.com.dbaonline.uintegrator.api.exception.UserAlreadyExistsException;
 import br.com.dbaonline.uintegrator.api.exception.UserNotFoundException;
-import br.com.dbaonline.uintegrator.api.serializer.UserSerializer;
+import br.com.dbaonline.uintegrator.serializer.UserSerializer;
 import br.com.dbaonline.uintegrator.api.service.UserService;
 import br.com.dbaonline.uintegrator.entity.UserEntity;
 import br.com.dbaonline.uintegrator.entity.UserRoleEntity;

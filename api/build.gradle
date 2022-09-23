@@ -13,7 +13,6 @@ apply from: '../common.gradle'
 dependencies {
     implementation project(':storer')
     implementation project(':service')
-    implementation project(':remote-logs')
 
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'

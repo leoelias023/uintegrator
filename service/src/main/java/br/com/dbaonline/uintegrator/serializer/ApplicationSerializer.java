@@ -1,4 +1,4 @@
-package br.com.dbaonline.uintegrator.api.serializer;
+package br.com.dbaonline.uintegrator.serializer;
 
 import br.com.dbaonline.uintegrator.entity.ApplicationEntity;
 import br.com.dbaonline.uintegrator.entity.ApplicationModuleEntity;
@@ -9,6 +9,7 @@ import lombok.val;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -19,11 +20,14 @@ public class ApplicationSerializer {
         val entity = new ApplicationEntity();
 
         entity.setDescription(application.getDescription());
-        entity.setModules(toEntities(application.getRegisterCode(), application.getModules()));
         entity.setCompanyId(application.getCompanyId());
         entity.setPicture(application.getPicture());
         entity.setTitle(application.getTitle());
         entity.setRegisterCode(application.getRegisterCode());
+
+        if (Objects.nonNull(application.getModules())) {
+            entity.setModules(toEntities(application.getRegisterCode(), application.getModules()));
+        }
 
         return entity;
     }

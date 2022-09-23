@@ -16,7 +16,7 @@ public class Submitters implements LogSubmitter {
         return new HttpLogSubmitter();
     }
 
-    private static LogSubmitter localSubmitter() { return new LocalLogSubmitter(); }
+    public static LogSubmitter localSubmitter() { return new LocalLogSubmitter(); }
 
     private static List<LogSubmitter> submitters() {
         return List.of(httpSubmitter(), localSubmitter());

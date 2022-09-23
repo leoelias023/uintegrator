@@ -1,10 +1,13 @@
 package br.com.dbaonline.uintegrator.api.controller;
 
 import br.com.dbaonline.uintegrator.api.service.ApplicationService;
+import br.com.dbaonline.uintegrator.api.service.LogsService;
 import br.com.dbaonline.uintegrator.entity.dto.Application;
 import br.com.dbaonline.uintegrator.entity.dto.ApplicationStatus;
+import br.com.dbaonline.uintegrator.storer.entity.ApplicationLog;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -17,6 +20,9 @@ public class ApplicationController {
 
     @Autowired
     private ApplicationService applicationService;
+
+    @Autowired
+    private LogsService logsService;
 
     @GetMapping("/company/{companyId}/application")
     public List<Application> listApplicationsOfCompany(@PathVariable Long companyId) {
@@ -34,4 +40,8 @@ public class ApplicationController {
         return applicationService.searchByApplicationStatus(id);
     }
 
+    @GetMapping("/application/{id}/logs")
+    public List<ApplicationLog> logs(@PathVariable UUID id) throws IOException {
+        return logsService.tailLogs(id);
+    }
 }

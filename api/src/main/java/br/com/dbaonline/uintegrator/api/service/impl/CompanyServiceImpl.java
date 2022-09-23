@@ -1,6 +1,6 @@
 package br.com.dbaonline.uintegrator.api.service.impl;
 
-import br.com.dbaonline.uintegrator.api.serializer.CompanySerializer;
+import br.com.dbaonline.uintegrator.serializer.CompanySerializer;
 import br.com.dbaonline.uintegrator.api.service.CompanyService;
 import br.com.dbaonline.uintegrator.entity.dto.Company;
 import br.com.dbaonline.uintegrator.repository.CompanyRepository;

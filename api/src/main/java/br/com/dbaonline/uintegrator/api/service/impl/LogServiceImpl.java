@@ -42,6 +42,11 @@ public class LogServiceImpl implements LogsService {
     }
 
     @Override
+    public List<ApplicationLog> tailLogs(@NonNull UUID applicatioCode) throws IOException {
+        return logClient.tail(applicatioCode, 50);
+    }
+
+    @Override
     public void createApplicationLogIndex(@NonNull UUID applicationCode) throws IOException {
         logClient.createDataStream(applicationCode);
     }

@@ -1,6 +1,6 @@
 package br.com.dbaonline.uintegrator.api.service.impl;
 
-import br.com.dbaonline.uintegrator.api.serializer.SecretKeySerializer;
+import br.com.dbaonline.uintegrator.serializer.SecretKeySerializer;
 import br.com.dbaonline.uintegrator.api.service.ApplicationService;
 import br.com.dbaonline.uintegrator.api.service.SecretKeyService;
 import br.com.dbaonline.uintegrator.entity.dto.CreateApplicationKey;
@@ -12,7 +12,7 @@ import lombok.NonNull;
 import lombok.val;
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,6 +36,9 @@ public class SecretKeyServiceImpl implements SecretKeyService {
 
     @Autowired
     private ApplicationService applicationService;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     @Transactional(readOnly = true)
@@ -81,7 +84,7 @@ public class SecretKeyServiceImpl implements SecretKeyService {
     public CreatedApplicationKey create(@NonNull CreateApplicationKey createApplicationKey, @NonNull Long companyId) {
 
         val generatedKey = Base64.encodeBase64URLSafeString(UUID.randomUUID().toString().getBytes());
-        val cryptedGeneratedKey = new BCryptPasswordEncoder().encode(generatedKey);
+        val cryptedGeneratedKey = passwordEncoder.encode(generatedKey);
 
         secretKeyRepository.save(
                 secretKeySerializer.toEntity(

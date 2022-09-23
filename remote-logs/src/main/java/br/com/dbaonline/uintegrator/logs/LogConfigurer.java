@@ -1,5 +1,6 @@
 package br.com.dbaonline.uintegrator.logs;
 
+import br.com.dbaonline.uintegrator.logs.client.IngestorClient;
 import br.com.dbaonline.uintegrator.logs.commands.ConfigureCommand;
 import br.com.dbaonline.uintegrator.logs.commands.InitializeContextCommand;
 import lombok.NonNull;
@@ -8,6 +9,7 @@ import lombok.val;
 import java.util.Objects;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * Class config to manage log configurations of the application.
@@ -15,6 +17,8 @@ import java.util.concurrent.Executors;
  * @author Leonardo Elias de Oliveira
  */
 public class LogConfigurer {
+
+    private static final AtomicBoolean beatInitialized = new AtomicBoolean(false);
 
     public static Executor singleThreadExecutor() {
         return Executors.newSingleThreadExecutor();
@@ -43,10 +47,23 @@ public class LogConfigurer {
                     .httpEndpoint(configureCommand.getHttpEndpoint())
                     .build()
         );
+
+        initializePulse(IngestorClient.Credentials.builder()
+                .secretKey(configureCommand.getSecretKey())
+                .applicationKey(configureCommand.getApplicationKey())
+                .build());
     }
 
     private static Executor defaultExecutor() {
         return singleThreadExecutor();
+    }
+
+    private static void initializePulse(@NonNull IngestorClient.Credentials credentials) {
+
+        if (!beatInitialized.get()) {
+            beatInitialized.set(true);
+            new PulseBeat(credentials).start();
+        }
     }
 
 }

@@ -1,4 +1,4 @@
-package br.com.dbaonline.uintegrator.api.serializer;
+package br.com.dbaonline.uintegrator.serializer;
 
 import br.com.dbaonline.uintegrator.entity.CompanyEntity;
 import br.com.dbaonline.uintegrator.entity.dto.Company;
